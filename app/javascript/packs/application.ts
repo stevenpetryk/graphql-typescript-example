@@ -1,4 +1,5 @@
 import { ApolloClient, HttpLink, InMemoryCache, gql } from "@apollo/client";
+import { Test } from "./__generated__/Test";
 
 require("@rails/ujs").start();
 require("turbolinks").start();
@@ -26,5 +27,5 @@ const GET_TEST = gql`
 `;
 
 client
-  .query({ query: GET_TEST })
+  .query<Test>({ query: GET_TEST })
   .then((result) => console.log("GraphQL result: ", result.data));
