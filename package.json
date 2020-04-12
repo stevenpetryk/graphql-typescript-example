@@ -1,6 +1,9 @@
 {
   "name": "graphql_typescript_example",
   "private": true,
+  "scripts": {
+    "graphql:codegen": "bin/rails dump_graphql_schema && apollo client:codegen --target typescript"
+  },
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.43",
     "@rails/actioncable": "^6.0.0",
@@ -14,6 +17,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "apollo": "^2.27.0",
     "webpack-dev-server": "^3.10.3"
   }
 }
