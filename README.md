@@ -1,24 +1,30 @@
-# README
+# Rails, GraphQL, and TypeScript: a monolith worth trying
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the example Rails repository to go along with my blog post, [Rails, GraphQL, and TypeScript: a monolith worth trying](https://stevenpetryk.com/blog/rails-graphql-typescript-stack/).
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+Use Ruby 2.7. Install dependencies like this:
 
-* System dependencies
+```bash
+bin/setup
+```
 
-* Configuration
+## Usage
 
-* Database creation
+Start the Rails server:
 
-* Database initialization
+```bash
+rails s
+```
 
-* How to run the test suite
+Optionally, start a separate webpack dev server (for faster compilation):
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+bin/webpack-dev-server
+```
 
-* Deployment instructions
+Then visit some pages:
 
-* ...
+- http://localhost:3000/
+- http://localhost:3000/graphiql
